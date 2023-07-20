@@ -1,0 +1,3 @@
+#BENEFITS OF USING CAIRO FOR SMART CONTRACT DEVELOPMENT
+
+Cairo is a high-level Programming Language that Simplifies the development Process therefore Making it more accessible. It's efficiency and optimized designe enhances the execution speed of *smart contracts* therefore reducing the overall gas costs on the network and in addition, its formal verification capabilities ensures enhanced security and correctness which minimizes the risk of vurnerabilities and bugs.
