@@ -1,7 +1,7 @@
 use debug::PrintTrait;
 
 fn main() {
-    let area = area{length, width};
+    let area = area(length, width);
     let length = 12;
     let width = 5;
 
