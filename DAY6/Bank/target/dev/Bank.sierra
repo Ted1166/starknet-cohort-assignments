@@ -1,0 +1,184 @@
+type Array<Bank::Bank::BankAccount> = Array<Bank::Bank::BankAccount> [storable: true, drop: true, dup: false, zero_sized: false];
+type core::panics::Panic = Struct<ut@core::panics::Panic> [storable: true, drop: true, dup: true, zero_sized: true];
+type Array<felt252> = Array<felt252> [storable: true, drop: true, dup: false, zero_sized: false];
+type Box<Bank::Bank::BankAccount> = Box<Bank::Bank::BankAccount> [storable: true, drop: true, dup: true, zero_sized: false];
+type Tuple<Box<Bank::Bank::BankAccount>> = Struct<ut@Tuple, Box<Bank::Bank::BankAccount>> [storable: true, drop: true, dup: true, zero_sized: false];
+type Tuple<core::panics::Panic, Array<felt252>> = Struct<ut@Tuple, core::panics::Panic, Array<felt252>> [storable: true, drop: true, dup: false, zero_sized: false];
+type core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)> = Enum<ut@core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)>, Tuple<Box<Bank::Bank::BankAccount>>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type Bank::Bank::BankStorage = Struct<ut@Bank::Bank::BankStorage, Array<Bank::Bank::BankAccount>> [storable: true, drop: true, dup: false, zero_sized: false];
+type Snapshot<Bank::Bank::BankStorage> = Snapshot<Bank::Bank::BankStorage> [storable: true, drop: true, dup: true, zero_sized: false];
+type u32 = u32 [storable: true, drop: true, dup: true, zero_sized: false];
+type felt252 = felt252 [storable: true, drop: true, dup: true, zero_sized: false];
+type Bank::Bank::BankAccount = Struct<ut@Bank::Bank::BankAccount, u32, felt252> [storable: true, drop: true, dup: true, zero_sized: false];
+type Unit = Struct<ut@Tuple> [storable: true, drop: true, dup: true, zero_sized: true];
+type Tuple<Unit> = Struct<ut@Tuple, Unit> [storable: true, drop: true, dup: true, zero_sized: true];
+type core::panics::PanicResult::<((),)> = Enum<ut@core::panics::PanicResult::<((),)>, Tuple<Unit>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type Tuple<Bank::Bank::BankAccount> = Struct<ut@Tuple, Bank::Bank::BankAccount> [storable: true, drop: true, dup: true, zero_sized: false];
+type core::panics::PanicResult::<(@Bank::Bank::BankAccount,)> = Enum<ut@core::panics::PanicResult::<(@Bank::Bank::BankAccount,)>, Tuple<Bank::Bank::BankAccount>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type RangeCheck = RangeCheck [storable: true, drop: false, dup: false, zero_sized: false];
+type Snapshot<Array<Bank::Bank::BankAccount>> = Snapshot<Array<Bank::Bank::BankAccount>> [storable: true, drop: true, dup: true, zero_sized: false];
+
+libfunc array_new<Bank::Bank::BankAccount> = array_new<Bank::Bank::BankAccount>;
+libfunc struct_construct<Bank::Bank::BankStorage> = struct_construct<Bank::Bank::BankStorage>;
+libfunc felt252_const<7017561974736057393> = felt252_const<7017561974736057393>;
+libfunc store_temp<felt252> = store_temp<felt252>;
+libfunc store_temp<Bank::Bank::BankStorage> = store_temp<Bank::Bank::BankStorage>;
+libfunc function_call<user@Bank::Bank::createAccounts> = function_call<user@Bank::Bank::createAccounts>;
+libfunc drop<Unit> = drop<Unit>;
+libfunc felt252_const<7017561974736057394> = felt252_const<7017561974736057394>;
+libfunc struct_deconstruct<Bank::Bank::BankStorage> = struct_deconstruct<Bank::Bank::BankStorage>;
+libfunc snapshot_take<Array<Bank::Bank::BankAccount>> = snapshot_take<Array<Bank::Bank::BankAccount>>;
+libfunc drop<Array<Bank::Bank::BankAccount>> = drop<Array<Bank::Bank::BankAccount>>;
+libfunc u32_const<0> = u32_const<0>;
+libfunc store_temp<RangeCheck> = store_temp<RangeCheck>;
+libfunc store_temp<Snapshot<Array<Bank::Bank::BankAccount>>> = store_temp<Snapshot<Array<Bank::Bank::BankAccount>>>;
+libfunc store_temp<u32> = store_temp<u32>;
+libfunc function_call<user@core::array::ArrayIndex::<Bank::Bank::BankAccount>::index> = function_call<user@core::array::ArrayIndex::<Bank::Bank::BankAccount>::index>;
+libfunc enum_match<core::panics::PanicResult::<(@Bank::Bank::BankAccount,)>> = enum_match<core::panics::PanicResult::<(@Bank::Bank::BankAccount,)>>;
+libfunc branch_align = branch_align;
+libfunc drop<Tuple<Bank::Bank::BankAccount>> = drop<Tuple<Bank::Bank::BankAccount>>;
+libfunc struct_construct<Unit> = struct_construct<Unit>;
+libfunc struct_construct<Tuple<Unit>> = struct_construct<Tuple<Unit>>;
+libfunc enum_init<core::panics::PanicResult::<((),)>, 0> = enum_init<core::panics::PanicResult::<((),)>, 0>;
+libfunc store_temp<core::panics::PanicResult::<((),)>> = store_temp<core::panics::PanicResult::<((),)>>;
+libfunc enum_init<core::panics::PanicResult::<((),)>, 1> = enum_init<core::panics::PanicResult::<((),)>, 1>;
+libfunc store_temp<Unit> = store_temp<Unit>;
+libfunc struct_construct<Bank::Bank::BankAccount> = struct_construct<Bank::Bank::BankAccount>;
+libfunc store_temp<Bank::Bank::BankAccount> = store_temp<Bank::Bank::BankAccount>;
+libfunc array_append<Bank::Bank::BankAccount> = array_append<Bank::Bank::BankAccount>;
+libfunc struct_snapshot_deconstruct<Bank::Bank::BankStorage> = struct_snapshot_deconstruct<Bank::Bank::BankStorage>;
+libfunc array_len<Bank::Bank::BankAccount> = array_len<Bank::Bank::BankAccount>;
+libfunc struct_deconstruct<Bank::Bank::BankAccount> = struct_deconstruct<Bank::Bank::BankAccount>;
+libfunc drop<u32> = drop<u32>;
+libfunc function_call<user@core::array::array_at::<Bank::Bank::BankAccount>> = function_call<user@core::array::array_at::<Bank::Bank::BankAccount>>;
+libfunc enum_match<core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)>> = enum_match<core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)>>;
+libfunc struct_deconstruct<Tuple<Box<Bank::Bank::BankAccount>>> = struct_deconstruct<Tuple<Box<Bank::Bank::BankAccount>>>;
+libfunc unbox<Bank::Bank::BankAccount> = unbox<Bank::Bank::BankAccount>;
+libfunc struct_construct<Tuple<Bank::Bank::BankAccount>> = struct_construct<Tuple<Bank::Bank::BankAccount>>;
+libfunc enum_init<core::panics::PanicResult::<(@Bank::Bank::BankAccount,)>, 0> = enum_init<core::panics::PanicResult::<(@Bank::Bank::BankAccount,)>, 0>;
+libfunc store_temp<core::panics::PanicResult::<(@Bank::Bank::BankAccount,)>> = store_temp<core::panics::PanicResult::<(@Bank::Bank::BankAccount,)>>;
+libfunc enum_init<core::panics::PanicResult::<(@Bank::Bank::BankAccount,)>, 1> = enum_init<core::panics::PanicResult::<(@Bank::Bank::BankAccount,)>, 1>;
+libfunc array_get<Bank::Bank::BankAccount> = array_get<Bank::Bank::BankAccount>;
+libfunc struct_construct<Tuple<Box<Bank::Bank::BankAccount>>> = struct_construct<Tuple<Box<Bank::Bank::BankAccount>>>;
+libfunc enum_init<core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)>, 0> = enum_init<core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)>, 0>;
+libfunc store_temp<core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)>> = store_temp<core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)>>;
+libfunc array_new<felt252> = array_new<felt252>;
+libfunc felt252_const<1637570914057682275393755530660268060279989363> = felt252_const<1637570914057682275393755530660268060279989363>;
+libfunc array_append<felt252> = array_append<felt252>;
+libfunc struct_construct<core::panics::Panic> = struct_construct<core::panics::Panic>;
+libfunc struct_construct<Tuple<core::panics::Panic, Array<felt252>>> = struct_construct<Tuple<core::panics::Panic, Array<felt252>>>;
+libfunc enum_init<core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)>, 1> = enum_init<core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)>, 1>;
+
+array_new<Bank::Bank::BankAccount>() -> ([1]); // 0
+struct_construct<Bank::Bank::BankStorage>([1]) -> ([2]); // 1
+felt252_const<7017561974736057393>() -> ([3]); // 2
+store_temp<felt252>([3]) -> ([6]); // 3
+store_temp<Bank::Bank::BankStorage>([2]) -> ([7]); // 4
+function_call<user@Bank::Bank::createAccounts>([6], [7]) -> ([4], [5]); // 5
+drop<Unit>([5]) -> (); // 6
+felt252_const<7017561974736057394>() -> ([8]); // 7
+store_temp<felt252>([8]) -> ([11]); // 8
+store_temp<Bank::Bank::BankStorage>([4]) -> ([12]); // 9
+function_call<user@Bank::Bank::createAccounts>([11], [12]) -> ([9], [10]); // 10
+drop<Unit>([10]) -> (); // 11
+struct_deconstruct<Bank::Bank::BankStorage>([9]) -> ([13]); // 12
+snapshot_take<Array<Bank::Bank::BankAccount>>([13]) -> ([14], [15]); // 13
+drop<Array<Bank::Bank::BankAccount>>([14]) -> (); // 14
+u32_const<0>() -> ([16]); // 15
+store_temp<RangeCheck>([0]) -> ([19]); // 16
+store_temp<Snapshot<Array<Bank::Bank::BankAccount>>>([15]) -> ([20]); // 17
+store_temp<u32>([16]) -> ([21]); // 18
+function_call<user@core::array::ArrayIndex::<Bank::Bank::BankAccount>::index>([19], [20], [21]) -> ([17], [18]); // 19
+enum_match<core::panics::PanicResult::<(@Bank::Bank::BankAccount,)>>([18]) { fallthrough([22]) 29([23]) }; // 20
+branch_align() -> (); // 21
+drop<Tuple<Bank::Bank::BankAccount>>([22]) -> (); // 22
+struct_construct<Unit>() -> ([24]); // 23
+struct_construct<Tuple<Unit>>([24]) -> ([25]); // 24
+enum_init<core::panics::PanicResult::<((),)>, 0>([25]) -> ([26]); // 25
+store_temp<RangeCheck>([17]) -> ([27]); // 26
+store_temp<core::panics::PanicResult::<((),)>>([26]) -> ([28]); // 27
+return([27], [28]); // 28
+branch_align() -> (); // 29
+enum_init<core::panics::PanicResult::<((),)>, 1>([23]) -> ([29]); // 30
+store_temp<RangeCheck>([17]) -> ([30]); // 31
+store_temp<core::panics::PanicResult::<((),)>>([29]) -> ([31]); // 32
+return([30], [31]); // 33
+struct_construct<Unit>() -> ([0]); // 34
+store_temp<Unit>([0]) -> ([1]); // 35
+return([1]); // 36
+struct_construct<Unit>() -> ([0]); // 37
+store_temp<Unit>([0]) -> ([1]); // 38
+return([1]); // 39
+struct_construct<Unit>() -> ([0]); // 40
+store_temp<Unit>([0]) -> ([1]); // 41
+return([1]); // 42
+struct_construct<Unit>() -> ([0]); // 43
+store_temp<Unit>([0]) -> ([1]); // 44
+return([1]); // 45
+array_new<Bank::Bank::BankAccount>() -> ([2]); // 46
+drop<Array<Bank::Bank::BankAccount>>([2]) -> (); // 47
+u32_const<0>() -> ([3]); // 48
+struct_construct<Bank::Bank::BankAccount>([3], [0]) -> ([4]); // 49
+struct_deconstruct<Bank::Bank::BankStorage>([1]) -> ([5]); // 50
+store_temp<Bank::Bank::BankAccount>([4]) -> ([4]); // 51
+array_append<Bank::Bank::BankAccount>([5], [4]) -> ([6]); // 52
+struct_construct<Unit>() -> ([7]); // 53
+struct_construct<Bank::Bank::BankStorage>([6]) -> ([8]); // 54
+store_temp<Bank::Bank::BankStorage>([8]) -> ([9]); // 55
+store_temp<Unit>([7]) -> ([10]); // 56
+return([9], [10]); // 57
+struct_snapshot_deconstruct<Bank::Bank::BankStorage>([0]) -> ([1]); // 58
+array_len<Bank::Bank::BankAccount>([1]) -> ([2]); // 59
+store_temp<u32>([2]) -> ([3]); // 60
+return([3]); // 61
+struct_deconstruct<Bank::Bank::BankAccount>([0]) -> ([1], [2]); // 62
+drop<u32>([1]) -> (); // 63
+store_temp<felt252>([2]) -> ([3]); // 64
+return([3]); // 65
+store_temp<RangeCheck>([0]) -> ([5]); // 66
+store_temp<Snapshot<Array<Bank::Bank::BankAccount>>>([1]) -> ([6]); // 67
+store_temp<u32>([2]) -> ([7]); // 68
+function_call<user@core::array::array_at::<Bank::Bank::BankAccount>>([5], [6], [7]) -> ([3], [4]); // 69
+enum_match<core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)>>([4]) { fallthrough([8]) 79([9]) }; // 70
+branch_align() -> (); // 71
+struct_deconstruct<Tuple<Box<Bank::Bank::BankAccount>>>([8]) -> ([10]); // 72
+unbox<Bank::Bank::BankAccount>([10]) -> ([11]); // 73
+struct_construct<Tuple<Bank::Bank::BankAccount>>([11]) -> ([12]); // 74
+enum_init<core::panics::PanicResult::<(@Bank::Bank::BankAccount,)>, 0>([12]) -> ([13]); // 75
+store_temp<RangeCheck>([3]) -> ([14]); // 76
+store_temp<core::panics::PanicResult::<(@Bank::Bank::BankAccount,)>>([13]) -> ([15]); // 77
+return([14], [15]); // 78
+branch_align() -> (); // 79
+enum_init<core::panics::PanicResult::<(@Bank::Bank::BankAccount,)>, 1>([9]) -> ([16]); // 80
+store_temp<RangeCheck>([3]) -> ([17]); // 81
+store_temp<core::panics::PanicResult::<(@Bank::Bank::BankAccount,)>>([16]) -> ([18]); // 82
+return([17], [18]); // 83
+array_get<Bank::Bank::BankAccount>([0], [1], [2]) { fallthrough([3], [4]) 91([5]) }; // 84
+branch_align() -> (); // 85
+struct_construct<Tuple<Box<Bank::Bank::BankAccount>>>([4]) -> ([6]); // 86
+enum_init<core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)>, 0>([6]) -> ([7]); // 87
+store_temp<RangeCheck>([3]) -> ([8]); // 88
+store_temp<core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)>>([7]) -> ([9]); // 89
+return([8], [9]); // 90
+branch_align() -> (); // 91
+array_new<felt252>() -> ([10]); // 92
+felt252_const<1637570914057682275393755530660268060279989363>() -> ([11]); // 93
+store_temp<felt252>([11]) -> ([11]); // 94
+array_append<felt252>([10], [11]) -> ([12]); // 95
+struct_construct<core::panics::Panic>() -> ([13]); // 96
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([13], [12]) -> ([14]); // 97
+enum_init<core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)>, 1>([14]) -> ([15]); // 98
+store_temp<RangeCheck>([5]) -> ([16]); // 99
+store_temp<core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)>>([15]) -> ([17]); // 100
+return([16], [17]); // 101
+
+Bank::main@0([0]: RangeCheck) -> (RangeCheck, core::panics::PanicResult::<((),)>);
+Bank::Account::checkBalance@34() -> (Unit);
+Bank::Transaction::deposit@37() -> (Unit);
+Bank::Transaction::withdraw@40() -> (Unit);
+Bank::Transaction::transfer@43() -> (Unit);
+Bank::Bank::createAccounts@46([0]: felt252, [1]: Bank::Bank::BankStorage) -> (Bank::Bank::BankStorage, Unit);
+Bank::Bank::displayLength@58([0]: Snapshot<Bank::Bank::BankStorage>) -> (u32);
+Bank::Bank::displayAccount@62([0]: Bank::Bank::BankAccount) -> (felt252);
+core::array::ArrayIndex::<Bank::Bank::BankAccount>::index@66([0]: RangeCheck, [1]: Snapshot<Array<Bank::Bank::BankAccount>>, [2]: u32) -> (RangeCheck, core::panics::PanicResult::<(@Bank::Bank::BankAccount,)>);
+core::array::array_at::<Bank::Bank::BankAccount>@84([0]: RangeCheck, [1]: Snapshot<Array<Bank::Bank::BankAccount>>, [2]: u32) -> (RangeCheck, core::panics::PanicResult::<(core::box::Box::<@Bank::Bank::BankAccount>,)>);

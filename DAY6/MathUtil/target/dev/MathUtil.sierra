@@ -1,0 +1,844 @@
+type u32 = u32 [storable: true, drop: true, dup: true, zero_sized: false];
+type u128 = u128 [storable: true, drop: true, dup: true, zero_sized: false];
+type Unit = Struct<ut@Tuple> [storable: true, drop: true, dup: true, zero_sized: true];
+type core::bool = Enum<ut@core::bool, Unit, Unit> [storable: true, drop: true, dup: true, zero_sized: false];
+type Tuple<u128, core::bool> = Struct<ut@Tuple, u128, core::bool> [storable: true, drop: true, dup: true, zero_sized: false];
+type Tuple<u128, u128> = Struct<ut@Tuple, u128, u128> [storable: true, drop: true, dup: true, zero_sized: false];
+type U128MulGuarantee = U128MulGuarantee [storable: true, drop: false, dup: false, zero_sized: false];
+type core::integer::u256 = Struct<ut@core::integer::u256, u128, u128> [storable: true, drop: true, dup: true, zero_sized: false];
+type Tuple<core::integer::u256, core::bool> = Struct<ut@Tuple, core::integer::u256, core::bool> [storable: true, drop: true, dup: true, zero_sized: false];
+type NonZero<u32> = NonZero<u32> [storable: true, drop: true, dup: true, zero_sized: false];
+type Tuple<NonZero<u32>> = Struct<ut@Tuple, NonZero<u32>> [storable: true, drop: true, dup: true, zero_sized: false];
+type core::panics::Panic = Struct<ut@core::panics::Panic> [storable: true, drop: true, dup: true, zero_sized: true];
+type Array<felt252> = Array<felt252> [storable: true, drop: true, dup: false, zero_sized: false];
+type Tuple<core::panics::Panic, Array<felt252>> = Struct<ut@Tuple, core::panics::Panic, Array<felt252>> [storable: true, drop: true, dup: false, zero_sized: false];
+type core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)> = Enum<ut@core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)>, Tuple<NonZero<u32>>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type core::option::Option::<core::integer::u256> = Enum<ut@core::option::Option::<core::integer::u256>, core::integer::u256, Unit> [storable: true, drop: true, dup: true, zero_sized: false];
+type core::option::Option::<core::integer::u32> = Enum<ut@core::option::Option::<core::integer::u32>, u32, Unit> [storable: true, drop: true, dup: true, zero_sized: false];
+type u64 = u64 [storable: true, drop: true, dup: true, zero_sized: false];
+type core::option::Option::<core::zeroable::NonZero::<core::integer::u32>> = Enum<ut@core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>, NonZero<u32>, Unit> [storable: true, drop: true, dup: true, zero_sized: false];
+type Tuple<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>> = Struct<ut@Tuple, core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>> [storable: true, drop: true, dup: true, zero_sized: false];
+type core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)> = Enum<ut@core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)>, Tuple<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type felt252 = felt252 [storable: true, drop: true, dup: true, zero_sized: false];
+type core::result::Result::<core::integer::u32, core::integer::u32> = Enum<ut@core::result::Result::<core::integer::u32, core::integer::u32>, u32, u32> [storable: true, drop: true, dup: true, zero_sized: false];
+type Tuple<core::integer::u256> = Struct<ut@Tuple, core::integer::u256> [storable: true, drop: true, dup: true, zero_sized: false];
+type core::panics::PanicResult::<(core::integer::u256,)> = Enum<ut@core::panics::PanicResult::<(core::integer::u256,)>, Tuple<core::integer::u256>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type Tuple<Unit> = Struct<ut@Tuple, Unit> [storable: true, drop: true, dup: true, zero_sized: true];
+type core::panics::PanicResult::<((),)> = Enum<ut@core::panics::PanicResult::<((),)>, Tuple<Unit>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type Tuple<u32> = Struct<ut@Tuple, u32> [storable: true, drop: true, dup: true, zero_sized: false];
+type core::panics::PanicResult::<(core::integer::u32,)> = Enum<ut@core::panics::PanicResult::<(core::integer::u32,)>, Tuple<u32>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type RangeCheck = RangeCheck [storable: true, drop: false, dup: false, zero_sized: false];
+
+libfunc u32_const<5> = u32_const<5>;
+libfunc u32_const<7> = u32_const<7>;
+libfunc store_temp<RangeCheck> = store_temp<RangeCheck>;
+libfunc store_temp<u32> = store_temp<u32>;
+libfunc function_call<user@core::integer::U32Add::add> = function_call<user@core::integer::U32Add::add>;
+libfunc enum_match<core::panics::PanicResult::<(core::integer::u32,)>> = enum_match<core::panics::PanicResult::<(core::integer::u32,)>>;
+libfunc branch_align = branch_align;
+libfunc drop<Tuple<u32>> = drop<Tuple<u32>>;
+libfunc u32_const<12> = u32_const<12>;
+libfunc u32_const<4> = u32_const<4>;
+libfunc function_call<user@core::integer::U32Div::div> = function_call<user@core::integer::U32Div::div>;
+libfunc function_call<user@MathUtil::Geometry::circleArea> = function_call<user@MathUtil::Geometry::circleArea>;
+libfunc u32_const<2> = u32_const<2>;
+libfunc function_call<user@core::integer::U32Mul::mul> = function_call<user@core::integer::U32Mul::mul>;
+libfunc struct_deconstruct<Tuple<u32>> = struct_deconstruct<Tuple<u32>>;
+libfunc function_call<user@core::debug::U32PrintImpl::print> = function_call<user@core::debug::U32PrintImpl::print>;
+libfunc drop<Unit> = drop<Unit>;
+libfunc struct_construct<Unit> = struct_construct<Unit>;
+libfunc struct_construct<Tuple<Unit>> = struct_construct<Tuple<Unit>>;
+libfunc enum_init<core::panics::PanicResult::<((),)>, 0> = enum_init<core::panics::PanicResult::<((),)>, 0>;
+libfunc store_temp<core::panics::PanicResult::<((),)>> = store_temp<core::panics::PanicResult::<((),)>>;
+libfunc enum_init<core::panics::PanicResult::<((),)>, 1> = enum_init<core::panics::PanicResult::<((),)>, 1>;
+libfunc struct_construct<Tuple<u32>> = struct_construct<Tuple<u32>>;
+libfunc enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 0> = enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 0>;
+libfunc store_temp<core::panics::PanicResult::<(core::integer::u32,)>> = store_temp<core::panics::PanicResult::<(core::integer::u32,)>>;
+libfunc enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1> = enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>;
+libfunc function_call<user@core::integer::U32Sub::sub> = function_call<user@core::integer::U32Sub::sub>;
+libfunc store_temp<core::integer::u256> = store_temp<core::integer::u256>;
+libfunc function_call<user@core::integer::U256Mul::mul> = function_call<user@core::integer::U256Mul::mul>;
+libfunc enum_match<core::panics::PanicResult::<(core::integer::u256,)>> = enum_match<core::panics::PanicResult::<(core::integer::u256,)>>;
+libfunc struct_deconstruct<Tuple<core::integer::u256>> = struct_deconstruct<Tuple<core::integer::u256>>;
+libfunc struct_construct<Tuple<core::integer::u256>> = struct_construct<Tuple<core::integer::u256>>;
+libfunc enum_init<core::panics::PanicResult::<(core::integer::u256,)>, 0> = enum_init<core::panics::PanicResult::<(core::integer::u256,)>, 0>;
+libfunc store_temp<core::panics::PanicResult::<(core::integer::u256,)>> = store_temp<core::panics::PanicResult::<(core::integer::u256,)>>;
+libfunc enum_init<core::panics::PanicResult::<(core::integer::u256,)>, 1> = enum_init<core::panics::PanicResult::<(core::integer::u256,)>, 1>;
+libfunc u32_const<1> = u32_const<1>;
+libfunc drop<u32> = drop<u32>;
+libfunc u32_const<22> = u32_const<22>;
+libfunc dup<u32> = dup<u32>;
+libfunc u32_overflowing_add = u32_overflowing_add;
+libfunc enum_init<core::result::Result::<core::integer::u32, core::integer::u32>, 0> = enum_init<core::result::Result::<core::integer::u32, core::integer::u32>, 0>;
+libfunc store_temp<core::result::Result::<core::integer::u32, core::integer::u32>> = store_temp<core::result::Result::<core::integer::u32, core::integer::u32>>;
+libfunc jump = jump;
+libfunc enum_init<core::result::Result::<core::integer::u32, core::integer::u32>, 1> = enum_init<core::result::Result::<core::integer::u32, core::integer::u32>, 1>;
+libfunc felt252_const<155785504323917466144735657540098748279> = felt252_const<155785504323917466144735657540098748279>;
+libfunc rename<core::result::Result::<core::integer::u32, core::integer::u32>> = rename<core::result::Result::<core::integer::u32, core::integer::u32>>;
+libfunc store_temp<felt252> = store_temp<felt252>;
+libfunc function_call<user@core::result::ResultTraitImpl::<core::integer::u32, core::integer::u32>::expect::<core::integer::u32Drop>> = function_call<user@core::result::ResultTraitImpl::<core::integer::u32, core::integer::u32>::expect::<core::integer::u32Drop>>;
+libfunc function_call<user@core::integer::U32TryIntoNonZero::try_into> = function_call<user@core::integer::U32TryIntoNonZero::try_into>;
+libfunc enum_match<core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)>> = enum_match<core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)>>;
+libfunc struct_deconstruct<Tuple<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>>> = struct_deconstruct<Tuple<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>>>;
+libfunc enum_match<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>> = enum_match<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>>;
+libfunc u32_safe_divmod = u32_safe_divmod;
+libfunc array_new<felt252> = array_new<felt252>;
+libfunc felt252_const<5420154128225384396790819266608> = felt252_const<5420154128225384396790819266608>;
+libfunc array_append<felt252> = array_append<felt252>;
+libfunc struct_construct<core::panics::Panic> = struct_construct<core::panics::Panic>;
+libfunc struct_construct<Tuple<core::panics::Panic, Array<felt252>>> = struct_construct<Tuple<core::panics::Panic, Array<felt252>>>;
+libfunc u32_wide_mul = u32_wide_mul;
+libfunc store_temp<u64> = store_temp<u64>;
+libfunc function_call<user@core::integer::DowncastableTryInto::<core::integer::u64, core::integer::u32, core::integer::DowncastableU64U32>::try_into> = function_call<user@core::integer::DowncastableTryInto::<core::integer::u64, core::integer::u32, core::integer::DowncastableU64U32>::try_into>;
+libfunc enum_match<core::option::Option::<core::integer::u32>> = enum_match<core::option::Option::<core::integer::u32>>;
+libfunc felt252_const<155785504327651875780457110017927835511> = felt252_const<155785504327651875780457110017927835511>;
+libfunc u32_to_felt252 = u32_to_felt252;
+libfunc function_call<user@core::debug::Felt252PrintImpl::print> = function_call<user@core::debug::Felt252PrintImpl::print>;
+libfunc store_temp<Unit> = store_temp<Unit>;
+libfunc u32_overflowing_sub = u32_overflowing_sub;
+libfunc felt252_const<155785504329508738615720351733824384887> = felt252_const<155785504329508738615720351733824384887>;
+libfunc function_call<user@core::integer::u256_checked_mul> = function_call<user@core::integer::u256_checked_mul>;
+libfunc enum_match<core::option::Option::<core::integer::u256>> = enum_match<core::option::Option::<core::integer::u256>>;
+libfunc felt252_const<39879774624083218221772669863277689073527> = felt252_const<39879774624083218221772669863277689073527>;
+libfunc enum_match<core::result::Result::<core::integer::u32, core::integer::u32>> = enum_match<core::result::Result::<core::integer::u32, core::integer::u32>>;
+libfunc drop<felt252> = drop<felt252>;
+libfunc function_call<user@core::integer::u32_as_non_zero> = function_call<user@core::integer::u32_as_non_zero>;
+libfunc enum_match<core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)>> = enum_match<core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)>>;
+libfunc struct_deconstruct<Tuple<NonZero<u32>>> = struct_deconstruct<Tuple<NonZero<u32>>>;
+libfunc enum_init<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>, 0> = enum_init<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>, 0>;
+libfunc struct_construct<Tuple<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>>> = struct_construct<Tuple<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>>>;
+libfunc enum_init<core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)>, 0> = enum_init<core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)>, 0>;
+libfunc store_temp<core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)>> = store_temp<core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)>>;
+libfunc enum_init<core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)>, 1> = enum_init<core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)>, 1>;
+libfunc downcast<u64, u32> = downcast<u64, u32>;
+libfunc enum_init<core::option::Option::<core::integer::u32>, 0> = enum_init<core::option::Option::<core::integer::u32>, 0>;
+libfunc store_temp<core::option::Option::<core::integer::u32>> = store_temp<core::option::Option::<core::integer::u32>>;
+libfunc enum_init<core::option::Option::<core::integer::u32>, 1> = enum_init<core::option::Option::<core::integer::u32>, 1>;
+libfunc rename<RangeCheck> = rename<RangeCheck>;
+libfunc rename<core::option::Option::<core::integer::u32>> = rename<core::option::Option::<core::integer::u32>>;
+libfunc function_call<user@core::debug::print_felt252> = function_call<user@core::debug::print_felt252>;
+libfunc function_call<user@core::integer::u256_overflow_mul> = function_call<user@core::integer::u256_overflow_mul>;
+libfunc struct_deconstruct<Tuple<core::integer::u256, core::bool>> = struct_deconstruct<Tuple<core::integer::u256, core::bool>>;
+libfunc enum_match<core::bool> = enum_match<core::bool>;
+libfunc enum_init<core::option::Option::<core::integer::u256>, 0> = enum_init<core::option::Option::<core::integer::u256>, 0>;
+libfunc store_temp<core::option::Option::<core::integer::u256>> = store_temp<core::option::Option::<core::integer::u256>>;
+libfunc drop<core::integer::u256> = drop<core::integer::u256>;
+libfunc enum_init<core::option::Option::<core::integer::u256>, 1> = enum_init<core::option::Option::<core::integer::u256>, 1>;
+libfunc function_call<user@core::integer::u32_try_as_non_zero> = function_call<user@core::integer::u32_try_as_non_zero>;
+libfunc struct_construct<Tuple<NonZero<u32>>> = struct_construct<Tuple<NonZero<u32>>>;
+libfunc enum_init<core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)>, 0> = enum_init<core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)>, 0>;
+libfunc store_temp<core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)>> = store_temp<core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)>>;
+libfunc felt252_const<8445148841039306800> = felt252_const<8445148841039306800>;
+libfunc enum_init<core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)>, 1> = enum_init<core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)>, 1>;
+libfunc store_temp<Array<felt252>> = store_temp<Array<felt252>>;
+libfunc print = print;
+libfunc struct_deconstruct<core::integer::u256> = struct_deconstruct<core::integer::u256>;
+libfunc dup<u128> = dup<u128>;
+libfunc u128_guarantee_mul = u128_guarantee_mul;
+libfunc store_temp<U128MulGuarantee> = store_temp<U128MulGuarantee>;
+libfunc function_call<user@core::integer::U128MulGuaranteeDestruct::destruct> = function_call<user@core::integer::U128MulGuaranteeDestruct::destruct>;
+libfunc struct_construct<Tuple<u128, u128>> = struct_construct<Tuple<u128, u128>>;
+libfunc struct_deconstruct<Tuple<u128, u128>> = struct_deconstruct<Tuple<u128, u128>>;
+libfunc store_temp<u128> = store_temp<u128>;
+libfunc u128_overflowing_add = u128_overflowing_add;
+libfunc snapshot_take<u128> = snapshot_take<u128>;
+libfunc drop<u128> = drop<u128>;
+libfunc u128_const<0> = u128_const<0>;
+libfunc rename<u128> = rename<u128>;
+libfunc u128_eq = u128_eq;
+libfunc enum_init<core::bool, 0> = enum_init<core::bool, 0>;
+libfunc store_temp<core::bool> = store_temp<core::bool>;
+libfunc enum_init<core::bool, 1> = enum_init<core::bool, 1>;
+libfunc bool_not_impl = bool_not_impl;
+libfunc u128_overflowing_sub = u128_overflowing_sub;
+libfunc rename<core::bool> = rename<core::bool>;
+libfunc struct_construct<Tuple<u128, core::bool>> = struct_construct<Tuple<u128, core::bool>>;
+libfunc store_temp<Tuple<u128, core::bool>> = store_temp<Tuple<u128, core::bool>>;
+libfunc struct_deconstruct<Tuple<u128, core::bool>> = struct_deconstruct<Tuple<u128, core::bool>>;
+libfunc drop<core::bool> = drop<core::bool>;
+libfunc struct_construct<core::integer::u256> = struct_construct<core::integer::u256>;
+libfunc struct_construct<Tuple<core::integer::u256, core::bool>> = struct_construct<Tuple<core::integer::u256, core::bool>>;
+libfunc store_temp<Tuple<core::integer::u256, core::bool>> = store_temp<Tuple<core::integer::u256, core::bool>>;
+libfunc u32_is_zero = u32_is_zero;
+libfunc enum_init<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>, 1> = enum_init<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>, 1>;
+libfunc store_temp<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>> = store_temp<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>>;
+libfunc rename<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>> = rename<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>>;
+libfunc u128_mul_guarantee_verify = u128_mul_guarantee_verify;
+
+u32_const<5>() -> ([1]); // 0
+u32_const<7>() -> ([2]); // 1
+store_temp<RangeCheck>([0]) -> ([5]); // 2
+store_temp<u32>([1]) -> ([6]); // 3
+store_temp<u32>([2]) -> ([7]); // 4
+function_call<user@core::integer::U32Add::add>([5], [6], [7]) -> ([3], [4]); // 5
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([4]) { fallthrough([8]) 58([9]) }; // 6
+branch_align() -> (); // 7
+drop<Tuple<u32>>([8]) -> (); // 8
+u32_const<12>() -> ([10]); // 9
+u32_const<4>() -> ([11]); // 10
+store_temp<RangeCheck>([3]) -> ([14]); // 11
+store_temp<u32>([10]) -> ([15]); // 12
+store_temp<u32>([11]) -> ([16]); // 13
+function_call<user@core::integer::U32Div::div>([14], [15], [16]) -> ([12], [13]); // 14
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([13]) { fallthrough([17]) 53([18]) }; // 15
+branch_align() -> (); // 16
+drop<Tuple<u32>>([17]) -> (); // 17
+u32_const<4>() -> ([19]); // 18
+store_temp<RangeCheck>([12]) -> ([22]); // 19
+store_temp<u32>([19]) -> ([23]); // 20
+function_call<user@MathUtil::Geometry::circleArea>([22], [23]) -> ([20], [21]); // 21
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([21]) { fallthrough([24]) 48([25]) }; // 22
+branch_align() -> (); // 23
+drop<Tuple<u32>>([24]) -> (); // 24
+u32_const<4>() -> ([26]); // 25
+u32_const<2>() -> ([27]); // 26
+store_temp<RangeCheck>([20]) -> ([30]); // 27
+store_temp<u32>([26]) -> ([31]); // 28
+store_temp<u32>([27]) -> ([32]); // 29
+function_call<user@core::integer::U32Mul::mul>([30], [31], [32]) -> ([28], [29]); // 30
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([29]) { fallthrough([33]) 43([34]) }; // 31
+branch_align() -> (); // 32
+struct_deconstruct<Tuple<u32>>([33]) -> ([35]); // 33
+store_temp<u32>([35]) -> ([37]); // 34
+function_call<user@core::debug::U32PrintImpl::print>([37]) -> ([36]); // 35
+drop<Unit>([36]) -> (); // 36
+struct_construct<Unit>() -> ([38]); // 37
+struct_construct<Tuple<Unit>>([38]) -> ([39]); // 38
+enum_init<core::panics::PanicResult::<((),)>, 0>([39]) -> ([40]); // 39
+store_temp<RangeCheck>([28]) -> ([41]); // 40
+store_temp<core::panics::PanicResult::<((),)>>([40]) -> ([42]); // 41
+return([41], [42]); // 42
+branch_align() -> (); // 43
+enum_init<core::panics::PanicResult::<((),)>, 1>([34]) -> ([43]); // 44
+store_temp<RangeCheck>([28]) -> ([44]); // 45
+store_temp<core::panics::PanicResult::<((),)>>([43]) -> ([45]); // 46
+return([44], [45]); // 47
+branch_align() -> (); // 48
+enum_init<core::panics::PanicResult::<((),)>, 1>([25]) -> ([46]); // 49
+store_temp<RangeCheck>([20]) -> ([47]); // 50
+store_temp<core::panics::PanicResult::<((),)>>([46]) -> ([48]); // 51
+return([47], [48]); // 52
+branch_align() -> (); // 53
+enum_init<core::panics::PanicResult::<((),)>, 1>([18]) -> ([49]); // 54
+store_temp<RangeCheck>([12]) -> ([50]); // 55
+store_temp<core::panics::PanicResult::<((),)>>([49]) -> ([51]); // 56
+return([50], [51]); // 57
+branch_align() -> (); // 58
+enum_init<core::panics::PanicResult::<((),)>, 1>([9]) -> ([52]); // 59
+store_temp<RangeCheck>([3]) -> ([53]); // 60
+store_temp<core::panics::PanicResult::<((),)>>([52]) -> ([54]); // 61
+return([53], [54]); // 62
+store_temp<RangeCheck>([0]) -> ([5]); // 63
+store_temp<u32>([1]) -> ([6]); // 64
+store_temp<u32>([2]) -> ([7]); // 65
+function_call<user@core::integer::U32Add::add>([5], [6], [7]) -> ([3], [4]); // 66
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([4]) { fallthrough([8]) 75([9]) }; // 67
+branch_align() -> (); // 68
+struct_deconstruct<Tuple<u32>>([8]) -> ([10]); // 69
+struct_construct<Tuple<u32>>([10]) -> ([11]); // 70
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 0>([11]) -> ([12]); // 71
+store_temp<RangeCheck>([3]) -> ([13]); // 72
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([12]) -> ([14]); // 73
+return([13], [14]); // 74
+branch_align() -> (); // 75
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([9]) -> ([15]); // 76
+store_temp<RangeCheck>([3]) -> ([16]); // 77
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([15]) -> ([17]); // 78
+return([16], [17]); // 79
+store_temp<RangeCheck>([0]) -> ([5]); // 80
+store_temp<u32>([1]) -> ([6]); // 81
+store_temp<u32>([2]) -> ([7]); // 82
+function_call<user@core::integer::U32Sub::sub>([5], [6], [7]) -> ([3], [4]); // 83
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([4]) { fallthrough([8]) 92([9]) }; // 84
+branch_align() -> (); // 85
+struct_deconstruct<Tuple<u32>>([8]) -> ([10]); // 86
+struct_construct<Tuple<u32>>([10]) -> ([11]); // 87
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 0>([11]) -> ([12]); // 88
+store_temp<RangeCheck>([3]) -> ([13]); // 89
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([12]) -> ([14]); // 90
+return([13], [14]); // 91
+branch_align() -> (); // 92
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([9]) -> ([15]); // 93
+store_temp<RangeCheck>([3]) -> ([16]); // 94
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([15]) -> ([17]); // 95
+return([16], [17]); // 96
+store_temp<RangeCheck>([0]) -> ([5]); // 97
+store_temp<core::integer::u256>([1]) -> ([6]); // 98
+store_temp<core::integer::u256>([2]) -> ([7]); // 99
+function_call<user@core::integer::U256Mul::mul>([5], [6], [7]) -> ([3], [4]); // 100
+enum_match<core::panics::PanicResult::<(core::integer::u256,)>>([4]) { fallthrough([8]) 109([9]) }; // 101
+branch_align() -> (); // 102
+struct_deconstruct<Tuple<core::integer::u256>>([8]) -> ([10]); // 103
+struct_construct<Tuple<core::integer::u256>>([10]) -> ([11]); // 104
+enum_init<core::panics::PanicResult::<(core::integer::u256,)>, 0>([11]) -> ([12]); // 105
+store_temp<RangeCheck>([3]) -> ([13]); // 106
+store_temp<core::panics::PanicResult::<(core::integer::u256,)>>([12]) -> ([14]); // 107
+return([13], [14]); // 108
+branch_align() -> (); // 109
+enum_init<core::panics::PanicResult::<(core::integer::u256,)>, 1>([9]) -> ([15]); // 110
+store_temp<RangeCheck>([3]) -> ([16]); // 111
+store_temp<core::panics::PanicResult::<(core::integer::u256,)>>([15]) -> ([17]); // 112
+return([16], [17]); // 113
+store_temp<RangeCheck>([0]) -> ([5]); // 114
+store_temp<u32>([1]) -> ([6]); // 115
+store_temp<u32>([2]) -> ([7]); // 116
+function_call<user@core::integer::U32Div::div>([5], [6], [7]) -> ([3], [4]); // 117
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([4]) { fallthrough([8]) 126([9]) }; // 118
+branch_align() -> (); // 119
+struct_deconstruct<Tuple<u32>>([8]) -> ([10]); // 120
+struct_construct<Tuple<u32>>([10]) -> ([11]); // 121
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 0>([11]) -> ([12]); // 122
+store_temp<RangeCheck>([3]) -> ([13]); // 123
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([12]) -> ([14]); // 124
+return([13], [14]); // 125
+branch_align() -> (); // 126
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([9]) -> ([15]); // 127
+store_temp<RangeCheck>([3]) -> ([16]); // 128
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([15]) -> ([17]); // 129
+return([16], [17]); // 130
+store_temp<RangeCheck>([0]) -> ([5]); // 131
+store_temp<u32>([1]) -> ([6]); // 132
+store_temp<u32>([2]) -> ([7]); // 133
+function_call<user@core::integer::U32Mul::mul>([5], [6], [7]) -> ([3], [4]); // 134
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([4]) { fallthrough([8]) 143([9]) }; // 135
+branch_align() -> (); // 136
+struct_deconstruct<Tuple<u32>>([8]) -> ([10]); // 137
+struct_construct<Tuple<u32>>([10]) -> ([11]); // 138
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 0>([11]) -> ([12]); // 139
+store_temp<RangeCheck>([3]) -> ([13]); // 140
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([12]) -> ([14]); // 141
+return([13], [14]); // 142
+branch_align() -> (); // 143
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([9]) -> ([15]); // 144
+store_temp<RangeCheck>([3]) -> ([16]); // 145
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([15]) -> ([17]); // 146
+return([16], [17]); // 147
+u32_const<1>() -> ([3]); // 148
+u32_const<2>() -> ([4]); // 149
+store_temp<RangeCheck>([0]) -> ([7]); // 150
+store_temp<u32>([3]) -> ([8]); // 151
+store_temp<u32>([4]) -> ([9]); // 152
+function_call<user@core::integer::U32Div::div>([7], [8], [9]) -> ([5], [6]); // 153
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([6]) { fallthrough([10]) 187([11]) }; // 154
+branch_align() -> (); // 155
+struct_deconstruct<Tuple<u32>>([10]) -> ([12]); // 156
+store_temp<RangeCheck>([5]) -> ([15]); // 157
+store_temp<u32>([12]) -> ([16]); // 158
+store_temp<u32>([1]) -> ([17]); // 159
+function_call<user@core::integer::U32Mul::mul>([15], [16], [17]) -> ([13], [14]); // 160
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([14]) { fallthrough([18]) 181([19]) }; // 161
+branch_align() -> (); // 162
+struct_deconstruct<Tuple<u32>>([18]) -> ([20]); // 163
+store_temp<RangeCheck>([13]) -> ([23]); // 164
+store_temp<u32>([20]) -> ([24]); // 165
+store_temp<u32>([2]) -> ([25]); // 166
+function_call<user@core::integer::U32Mul::mul>([23], [24], [25]) -> ([21], [22]); // 167
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([22]) { fallthrough([26]) 176([27]) }; // 168
+branch_align() -> (); // 169
+struct_deconstruct<Tuple<u32>>([26]) -> ([28]); // 170
+struct_construct<Tuple<u32>>([28]) -> ([29]); // 171
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 0>([29]) -> ([30]); // 172
+store_temp<RangeCheck>([21]) -> ([31]); // 173
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([30]) -> ([32]); // 174
+return([31], [32]); // 175
+branch_align() -> (); // 176
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([27]) -> ([33]); // 177
+store_temp<RangeCheck>([21]) -> ([34]); // 178
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([33]) -> ([35]); // 179
+return([34], [35]); // 180
+branch_align() -> (); // 181
+drop<u32>([2]) -> (); // 182
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([19]) -> ([36]); // 183
+store_temp<RangeCheck>([13]) -> ([37]); // 184
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([36]) -> ([38]); // 185
+return([37], [38]); // 186
+branch_align() -> (); // 187
+drop<u32>([2]) -> (); // 188
+drop<u32>([1]) -> (); // 189
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([11]) -> ([39]); // 190
+store_temp<RangeCheck>([5]) -> ([40]); // 191
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([39]) -> ([41]); // 192
+return([40], [41]); // 193
+u32_const<22>() -> ([2]); // 194
+u32_const<7>() -> ([3]); // 195
+store_temp<RangeCheck>([0]) -> ([6]); // 196
+store_temp<u32>([2]) -> ([7]); // 197
+store_temp<u32>([3]) -> ([8]); // 198
+function_call<user@core::integer::U32Div::div>([6], [7], [8]) -> ([4], [5]); // 199
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([5]) { fallthrough([9]) 234([10]) }; // 200
+branch_align() -> (); // 201
+struct_deconstruct<Tuple<u32>>([9]) -> ([11]); // 202
+store_temp<RangeCheck>([4]) -> ([14]); // 203
+store_temp<u32>([11]) -> ([15]); // 204
+dup<u32>([1]) -> ([1], [16]); // 205
+store_temp<u32>([16]) -> ([16]); // 206
+function_call<user@core::integer::U32Mul::mul>([14], [15], [16]) -> ([12], [13]); // 207
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([13]) { fallthrough([17]) 228([18]) }; // 208
+branch_align() -> (); // 209
+struct_deconstruct<Tuple<u32>>([17]) -> ([19]); // 210
+store_temp<RangeCheck>([12]) -> ([22]); // 211
+store_temp<u32>([19]) -> ([23]); // 212
+store_temp<u32>([1]) -> ([24]); // 213
+function_call<user@core::integer::U32Mul::mul>([22], [23], [24]) -> ([20], [21]); // 214
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([21]) { fallthrough([25]) 223([26]) }; // 215
+branch_align() -> (); // 216
+struct_deconstruct<Tuple<u32>>([25]) -> ([27]); // 217
+struct_construct<Tuple<u32>>([27]) -> ([28]); // 218
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 0>([28]) -> ([29]); // 219
+store_temp<RangeCheck>([20]) -> ([30]); // 220
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([29]) -> ([31]); // 221
+return([30], [31]); // 222
+branch_align() -> (); // 223
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([26]) -> ([32]); // 224
+store_temp<RangeCheck>([20]) -> ([33]); // 225
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([32]) -> ([34]); // 226
+return([33], [34]); // 227
+branch_align() -> (); // 228
+drop<u32>([1]) -> (); // 229
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([18]) -> ([35]); // 230
+store_temp<RangeCheck>([12]) -> ([36]); // 231
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([35]) -> ([37]); // 232
+return([36], [37]); // 233
+branch_align() -> (); // 234
+drop<u32>([1]) -> (); // 235
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([10]) -> ([38]); // 236
+store_temp<RangeCheck>([4]) -> ([39]); // 237
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([38]) -> ([40]); // 238
+return([39], [40]); // 239
+u32_overflowing_add([0], [1], [2]) { fallthrough([3], [4]) 246([5], [6]) }; // 240
+branch_align() -> (); // 241
+enum_init<core::result::Result::<core::integer::u32, core::integer::u32>, 0>([4]) -> ([7]); // 242
+store_temp<RangeCheck>([3]) -> ([8]); // 243
+store_temp<core::result::Result::<core::integer::u32, core::integer::u32>>([7]) -> ([9]); // 244
+jump() { 250() }; // 245
+branch_align() -> (); // 246
+enum_init<core::result::Result::<core::integer::u32, core::integer::u32>, 1>([6]) -> ([10]); // 247
+store_temp<RangeCheck>([5]) -> ([8]); // 248
+store_temp<core::result::Result::<core::integer::u32, core::integer::u32>>([10]) -> ([9]); // 249
+felt252_const<155785504323917466144735657540098748279>() -> ([11]); // 250
+rename<core::result::Result::<core::integer::u32, core::integer::u32>>([9]) -> ([13]); // 251
+store_temp<felt252>([11]) -> ([14]); // 252
+function_call<user@core::result::ResultTraitImpl::<core::integer::u32, core::integer::u32>::expect::<core::integer::u32Drop>>([13], [14]) -> ([12]); // 253
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([12]) { fallthrough([15]) 262([16]) }; // 254
+branch_align() -> (); // 255
+struct_deconstruct<Tuple<u32>>([15]) -> ([17]); // 256
+struct_construct<Tuple<u32>>([17]) -> ([18]); // 257
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 0>([18]) -> ([19]); // 258
+store_temp<RangeCheck>([8]) -> ([20]); // 259
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([19]) -> ([21]); // 260
+return([20], [21]); // 261
+branch_align() -> (); // 262
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([16]) -> ([22]); // 263
+store_temp<RangeCheck>([8]) -> ([23]); // 264
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([22]) -> ([24]); // 265
+return([23], [24]); // 266
+store_temp<u32>([2]) -> ([4]); // 267
+function_call<user@core::integer::U32TryIntoNonZero::try_into>([4]) -> ([3]); // 268
+enum_match<core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)>>([3]) { fallthrough([5]) 294([6]) }; // 269
+branch_align() -> (); // 270
+struct_deconstruct<Tuple<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>>>([5]) -> ([7]); // 271
+enum_match<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>>([7]) { fallthrough([8]) 281([9]) }; // 272
+branch_align() -> (); // 273
+u32_safe_divmod([0], [1], [8]) -> ([10], [11], [12]); // 274
+drop<u32>([12]) -> (); // 275
+struct_construct<Tuple<u32>>([11]) -> ([13]); // 276
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 0>([13]) -> ([14]); // 277
+store_temp<RangeCheck>([10]) -> ([15]); // 278
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([14]) -> ([16]); // 279
+return([15], [16]); // 280
+branch_align() -> (); // 281
+drop<Unit>([9]) -> (); // 282
+drop<u32>([1]) -> (); // 283
+array_new<felt252>() -> ([17]); // 284
+felt252_const<5420154128225384396790819266608>() -> ([18]); // 285
+store_temp<felt252>([18]) -> ([18]); // 286
+array_append<felt252>([17], [18]) -> ([19]); // 287
+struct_construct<core::panics::Panic>() -> ([20]); // 288
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([20], [19]) -> ([21]); // 289
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([21]) -> ([22]); // 290
+store_temp<RangeCheck>([0]) -> ([23]); // 291
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([22]) -> ([24]); // 292
+return([23], [24]); // 293
+branch_align() -> (); // 294
+drop<u32>([1]) -> (); // 295
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([6]) -> ([25]); // 296
+store_temp<RangeCheck>([0]) -> ([26]); // 297
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([25]) -> ([27]); // 298
+return([26], [27]); // 299
+u32_wide_mul([1], [2]) -> ([3]); // 300
+store_temp<RangeCheck>([0]) -> ([6]); // 301
+store_temp<u64>([3]) -> ([7]); // 302
+function_call<user@core::integer::DowncastableTryInto::<core::integer::u64, core::integer::u32, core::integer::DowncastableU64U32>::try_into>([6], [7]) -> ([4], [5]); // 303
+enum_match<core::option::Option::<core::integer::u32>>([5]) { fallthrough([8]) 311([9]) }; // 304
+branch_align() -> (); // 305
+struct_construct<Tuple<u32>>([8]) -> ([10]); // 306
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 0>([10]) -> ([11]); // 307
+store_temp<RangeCheck>([4]) -> ([12]); // 308
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([11]) -> ([13]); // 309
+return([12], [13]); // 310
+branch_align() -> (); // 311
+drop<Unit>([9]) -> (); // 312
+array_new<felt252>() -> ([14]); // 313
+felt252_const<155785504327651875780457110017927835511>() -> ([15]); // 314
+store_temp<felt252>([15]) -> ([15]); // 315
+array_append<felt252>([14], [15]) -> ([16]); // 316
+struct_construct<core::panics::Panic>() -> ([17]); // 317
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([17], [16]) -> ([18]); // 318
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([18]) -> ([19]); // 319
+store_temp<RangeCheck>([4]) -> ([20]); // 320
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([19]) -> ([21]); // 321
+return([20], [21]); // 322
+u32_to_felt252([0]) -> ([1]); // 323
+store_temp<felt252>([1]) -> ([3]); // 324
+function_call<user@core::debug::Felt252PrintImpl::print>([3]) -> ([2]); // 325
+drop<Unit>([2]) -> (); // 326
+struct_construct<Unit>() -> ([4]); // 327
+store_temp<Unit>([4]) -> ([5]); // 328
+return([5]); // 329
+u32_overflowing_sub([0], [1], [2]) { fallthrough([3], [4]) 336([5], [6]) }; // 330
+branch_align() -> (); // 331
+enum_init<core::result::Result::<core::integer::u32, core::integer::u32>, 0>([4]) -> ([7]); // 332
+store_temp<RangeCheck>([3]) -> ([8]); // 333
+store_temp<core::result::Result::<core::integer::u32, core::integer::u32>>([7]) -> ([9]); // 334
+jump() { 340() }; // 335
+branch_align() -> (); // 336
+enum_init<core::result::Result::<core::integer::u32, core::integer::u32>, 1>([6]) -> ([10]); // 337
+store_temp<RangeCheck>([5]) -> ([8]); // 338
+store_temp<core::result::Result::<core::integer::u32, core::integer::u32>>([10]) -> ([9]); // 339
+felt252_const<155785504329508738615720351733824384887>() -> ([11]); // 340
+rename<core::result::Result::<core::integer::u32, core::integer::u32>>([9]) -> ([13]); // 341
+store_temp<felt252>([11]) -> ([14]); // 342
+function_call<user@core::result::ResultTraitImpl::<core::integer::u32, core::integer::u32>::expect::<core::integer::u32Drop>>([13], [14]) -> ([12]); // 343
+enum_match<core::panics::PanicResult::<(core::integer::u32,)>>([12]) { fallthrough([15]) 352([16]) }; // 344
+branch_align() -> (); // 345
+struct_deconstruct<Tuple<u32>>([15]) -> ([17]); // 346
+struct_construct<Tuple<u32>>([17]) -> ([18]); // 347
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 0>([18]) -> ([19]); // 348
+store_temp<RangeCheck>([8]) -> ([20]); // 349
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([19]) -> ([21]); // 350
+return([20], [21]); // 351
+branch_align() -> (); // 352
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([16]) -> ([22]); // 353
+store_temp<RangeCheck>([8]) -> ([23]); // 354
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([22]) -> ([24]); // 355
+return([23], [24]); // 356
+store_temp<RangeCheck>([0]) -> ([5]); // 357
+store_temp<core::integer::u256>([1]) -> ([6]); // 358
+store_temp<core::integer::u256>([2]) -> ([7]); // 359
+function_call<user@core::integer::u256_checked_mul>([5], [6], [7]) -> ([3], [4]); // 360
+enum_match<core::option::Option::<core::integer::u256>>([4]) { fallthrough([8]) 368([9]) }; // 361
+branch_align() -> (); // 362
+struct_construct<Tuple<core::integer::u256>>([8]) -> ([10]); // 363
+enum_init<core::panics::PanicResult::<(core::integer::u256,)>, 0>([10]) -> ([11]); // 364
+store_temp<RangeCheck>([3]) -> ([12]); // 365
+store_temp<core::panics::PanicResult::<(core::integer::u256,)>>([11]) -> ([13]); // 366
+return([12], [13]); // 367
+branch_align() -> (); // 368
+drop<Unit>([9]) -> (); // 369
+array_new<felt252>() -> ([14]); // 370
+felt252_const<39879774624083218221772669863277689073527>() -> ([15]); // 371
+store_temp<felt252>([15]) -> ([15]); // 372
+array_append<felt252>([14], [15]) -> ([16]); // 373
+struct_construct<core::panics::Panic>() -> ([17]); // 374
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([17], [16]) -> ([18]); // 375
+enum_init<core::panics::PanicResult::<(core::integer::u256,)>, 1>([18]) -> ([19]); // 376
+store_temp<RangeCheck>([3]) -> ([20]); // 377
+store_temp<core::panics::PanicResult::<(core::integer::u256,)>>([19]) -> ([21]); // 378
+return([20], [21]); // 379
+enum_match<core::result::Result::<core::integer::u32, core::integer::u32>>([0]) { fallthrough([2]) 387([3]) }; // 380
+branch_align() -> (); // 381
+drop<felt252>([1]) -> (); // 382
+struct_construct<Tuple<u32>>([2]) -> ([4]); // 383
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 0>([4]) -> ([5]); // 384
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([5]) -> ([6]); // 385
+return([6]); // 386
+branch_align() -> (); // 387
+drop<u32>([3]) -> (); // 388
+array_new<felt252>() -> ([7]); // 389
+array_append<felt252>([7], [1]) -> ([8]); // 390
+struct_construct<core::panics::Panic>() -> ([9]); // 391
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([9], [8]) -> ([10]); // 392
+enum_init<core::panics::PanicResult::<(core::integer::u32,)>, 1>([10]) -> ([11]); // 393
+store_temp<core::panics::PanicResult::<(core::integer::u32,)>>([11]) -> ([12]); // 394
+return([12]); // 395
+store_temp<u32>([0]) -> ([2]); // 396
+function_call<user@core::integer::u32_as_non_zero>([2]) -> ([1]); // 397
+enum_match<core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)>>([1]) { fallthrough([3]) 406([4]) }; // 398
+branch_align() -> (); // 399
+struct_deconstruct<Tuple<NonZero<u32>>>([3]) -> ([5]); // 400
+enum_init<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>, 0>([5]) -> ([6]); // 401
+struct_construct<Tuple<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>>>([6]) -> ([7]); // 402
+enum_init<core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)>, 0>([7]) -> ([8]); // 403
+store_temp<core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)>>([8]) -> ([9]); // 404
+return([9]); // 405
+branch_align() -> (); // 406
+enum_init<core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)>, 1>([4]) -> ([10]); // 407
+store_temp<core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)>>([10]) -> ([11]); // 408
+return([11]); // 409
+downcast<u64, u32>([0], [1]) { fallthrough([2], [3]) 416([4]) }; // 410
+branch_align() -> (); // 411
+enum_init<core::option::Option::<core::integer::u32>, 0>([3]) -> ([5]); // 412
+store_temp<RangeCheck>([2]) -> ([6]); // 413
+store_temp<core::option::Option::<core::integer::u32>>([5]) -> ([7]); // 414
+jump() { 421() }; // 415
+branch_align() -> (); // 416
+struct_construct<Unit>() -> ([8]); // 417
+enum_init<core::option::Option::<core::integer::u32>, 1>([8]) -> ([9]); // 418
+store_temp<RangeCheck>([4]) -> ([6]); // 419
+store_temp<core::option::Option::<core::integer::u32>>([9]) -> ([7]); // 420
+rename<RangeCheck>([6]) -> ([10]); // 421
+rename<core::option::Option::<core::integer::u32>>([7]) -> ([11]); // 422
+return([10], [11]); // 423
+store_temp<felt252>([0]) -> ([2]); // 424
+function_call<user@core::debug::print_felt252>([2]) -> ([1]); // 425
+drop<Unit>([1]) -> (); // 426
+struct_construct<Unit>() -> ([3]); // 427
+store_temp<Unit>([3]) -> ([4]); // 428
+return([4]); // 429
+store_temp<RangeCheck>([0]) -> ([5]); // 430
+store_temp<core::integer::u256>([1]) -> ([6]); // 431
+store_temp<core::integer::u256>([2]) -> ([7]); // 432
+function_call<user@core::integer::u256_overflow_mul>([5], [6], [7]) -> ([3], [4]); // 433
+struct_deconstruct<Tuple<core::integer::u256, core::bool>>([4]) -> ([8], [9]); // 434
+enum_match<core::bool>([9]) { fallthrough([10]) 441([11]) }; // 435
+branch_align() -> (); // 436
+drop<Unit>([10]) -> (); // 437
+enum_init<core::option::Option::<core::integer::u256>, 0>([8]) -> ([12]); // 438
+store_temp<core::option::Option::<core::integer::u256>>([12]) -> ([13]); // 439
+jump() { 447() }; // 440
+branch_align() -> (); // 441
+drop<Unit>([11]) -> (); // 442
+drop<core::integer::u256>([8]) -> (); // 443
+struct_construct<Unit>() -> ([14]); // 444
+enum_init<core::option::Option::<core::integer::u256>, 1>([14]) -> ([15]); // 445
+store_temp<core::option::Option::<core::integer::u256>>([15]) -> ([13]); // 446
+store_temp<RangeCheck>([3]) -> ([16]); // 447
+store_temp<core::option::Option::<core::integer::u256>>([13]) -> ([17]); // 448
+return([16], [17]); // 449
+store_temp<u32>([0]) -> ([2]); // 450
+function_call<user@core::integer::u32_try_as_non_zero>([2]) -> ([1]); // 451
+enum_match<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>>([1]) { fallthrough([3]) 458([4]) }; // 452
+branch_align() -> (); // 453
+struct_construct<Tuple<NonZero<u32>>>([3]) -> ([5]); // 454
+enum_init<core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)>, 0>([5]) -> ([6]); // 455
+store_temp<core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)>>([6]) -> ([7]); // 456
+return([7]); // 457
+branch_align() -> (); // 458
+drop<Unit>([4]) -> (); // 459
+array_new<felt252>() -> ([8]); // 460
+felt252_const<8445148841039306800>() -> ([9]); // 461
+store_temp<felt252>([9]) -> ([9]); // 462
+array_append<felt252>([8], [9]) -> ([10]); // 463
+struct_construct<core::panics::Panic>() -> ([11]); // 464
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([11], [10]) -> ([12]); // 465
+enum_init<core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)>, 1>([12]) -> ([13]); // 466
+store_temp<core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)>>([13]) -> ([14]); // 467
+return([14]); // 468
+array_new<felt252>() -> ([1]); // 469
+array_append<felt252>([1], [0]) -> ([2]); // 470
+store_temp<Array<felt252>>([2]) -> ([2]); // 471
+print([2]) -> (); // 472
+struct_construct<Unit>() -> ([3]); // 473
+store_temp<Unit>([3]) -> ([4]); // 474
+return([4]); // 475
+struct_deconstruct<core::integer::u256>([1]) -> ([3], [4]); // 476
+struct_deconstruct<core::integer::u256>([2]) -> ([5], [6]); // 477
+dup<u128>([3]) -> ([3], [10]); // 478
+dup<u128>([5]) -> ([5], [11]); // 479
+u128_guarantee_mul([10], [11]) -> ([7], [8], [9]); // 480
+store_temp<RangeCheck>([0]) -> ([14]); // 481
+store_temp<U128MulGuarantee>([9]) -> ([15]); // 482
+function_call<user@core::integer::U128MulGuaranteeDestruct::destruct>([14], [15]) -> ([12], [13]); // 483
+drop<Unit>([13]) -> (); // 484
+dup<u128>([6]) -> ([6], [19]); // 485
+u128_guarantee_mul([3], [19]) -> ([16], [17], [18]); // 486
+store_temp<RangeCheck>([12]) -> ([22]); // 487
+store_temp<U128MulGuarantee>([18]) -> ([23]); // 488
+function_call<user@core::integer::U128MulGuaranteeDestruct::destruct>([22], [23]) -> ([20], [21]); // 489
+drop<Unit>([21]) -> (); // 490
+struct_construct<Tuple<u128, u128>>([16], [17]) -> ([24]); // 491
+struct_deconstruct<Tuple<u128, u128>>([24]) -> ([25], [26]); // 492
+dup<u128>([4]) -> ([4], [30]); // 493
+u128_guarantee_mul([30], [5]) -> ([27], [28], [29]); // 494
+store_temp<RangeCheck>([20]) -> ([33]); // 495
+store_temp<U128MulGuarantee>([29]) -> ([34]); // 496
+function_call<user@core::integer::U128MulGuaranteeDestruct::destruct>([33], [34]) -> ([31], [32]); // 497
+drop<Unit>([32]) -> (); // 498
+struct_construct<Tuple<u128, u128>>([27], [28]) -> ([35]); // 499
+struct_deconstruct<Tuple<u128, u128>>([35]) -> ([36], [37]); // 500
+struct_construct<Tuple<u128, u128>>([7], [8]) -> ([38]); // 501
+struct_deconstruct<Tuple<u128, u128>>([38]) -> ([39], [40]); // 502
+store_temp<u128>([39]) -> ([39]); // 503
+store_temp<u128>([26]) -> ([26]); // 504
+store_temp<u128>([25]) -> ([25]); // 505
+store_temp<u128>([40]) -> ([40]); // 506
+store_temp<u128>([36]) -> ([36]); // 507
+store_temp<u128>([37]) -> ([37]); // 508
+u128_overflowing_add([31], [39], [26]) { fallthrough([41], [42]) 606([43], [44]) }; // 509
+branch_align() -> (); // 510
+snapshot_take<u128>([25]) -> ([45], [46]); // 511
+drop<u128>([45]) -> (); // 512
+u128_const<0>() -> ([47]); // 513
+snapshot_take<u128>([47]) -> ([48], [49]); // 514
+drop<u128>([48]) -> (); // 515
+rename<u128>([46]) -> ([50]); // 516
+snapshot_take<u128>([50]) -> ([51], [52]); // 517
+drop<u128>([51]) -> (); // 518
+rename<u128>([49]) -> ([53]); // 519
+snapshot_take<u128>([53]) -> ([54], [55]); // 520
+drop<u128>([54]) -> (); // 521
+rename<u128>([52]) -> ([56]); // 522
+rename<u128>([55]) -> ([57]); // 523
+store_temp<RangeCheck>([41]) -> ([41]); // 524
+u128_eq([56], [57]) { fallthrough() 531() }; // 525
+branch_align() -> (); // 526
+drop<u128>([6]) -> (); // 527
+drop<u128>([4]) -> (); // 528
+drop<u128>([36]) -> (); // 529
+jump() { 598() }; // 530
+branch_align() -> (); // 531
+snapshot_take<u128>([36]) -> ([58], [59]); // 532
+drop<u128>([58]) -> (); // 533
+u128_const<0>() -> ([60]); // 534
+snapshot_take<u128>([60]) -> ([61], [62]); // 535
+drop<u128>([61]) -> (); // 536
+rename<u128>([59]) -> ([63]); // 537
+snapshot_take<u128>([63]) -> ([64], [65]); // 538
+drop<u128>([64]) -> (); // 539
+rename<u128>([62]) -> ([66]); // 540
+snapshot_take<u128>([66]) -> ([67], [68]); // 541
+drop<u128>([67]) -> (); // 542
+rename<u128>([65]) -> ([69]); // 543
+rename<u128>([68]) -> ([70]); // 544
+u128_eq([69], [70]) { fallthrough() 551() }; // 545
+branch_align() -> (); // 546
+struct_construct<Unit>() -> ([71]); // 547
+enum_init<core::bool, 0>([71]) -> ([72]); // 548
+store_temp<core::bool>([72]) -> ([73]); // 549
+jump() { 555() }; // 550
+branch_align() -> (); // 551
+struct_construct<Unit>() -> ([74]); // 552
+enum_init<core::bool, 1>([74]) -> ([75]); // 553
+store_temp<core::bool>([75]) -> ([73]); // 554
+bool_not_impl([73]) -> ([76]); // 555
+store_temp<core::bool>([76]) -> ([76]); // 556
+enum_match<core::bool>([76]) { fallthrough([77]) 594([78]) }; // 557
+branch_align() -> (); // 558
+drop<Unit>([77]) -> (); // 559
+u128_const<0>() -> ([79]); // 560
+store_temp<u128>([79]) -> ([79]); // 561
+u128_overflowing_sub([41], [79], [4]) { fallthrough([80], [81]) 571([82], [83]) }; // 562
+branch_align() -> (); // 563
+drop<u128>([81]) -> (); // 564
+drop<u128>([6]) -> (); // 565
+struct_construct<Unit>() -> ([84]); // 566
+enum_init<core::bool, 0>([84]) -> ([85]); // 567
+store_temp<RangeCheck>([80]) -> ([86]); // 568
+store_temp<core::bool>([85]) -> ([87]); // 569
+jump() { 591() }; // 570
+branch_align() -> (); // 571
+drop<u128>([83]) -> (); // 572
+u128_const<0>() -> ([88]); // 573
+store_temp<u128>([88]) -> ([88]); // 574
+u128_overflowing_sub([82], [88], [6]) { fallthrough([89], [90]) 583([91], [92]) }; // 575
+branch_align() -> (); // 576
+drop<u128>([90]) -> (); // 577
+struct_construct<Unit>() -> ([93]); // 578
+enum_init<core::bool, 0>([93]) -> ([94]); // 579
+store_temp<RangeCheck>([89]) -> ([95]); // 580
+store_temp<core::bool>([94]) -> ([96]); // 581
+jump() { 589() }; // 582
+branch_align() -> (); // 583
+drop<u128>([92]) -> (); // 584
+struct_construct<Unit>() -> ([97]); // 585
+enum_init<core::bool, 1>([97]) -> ([98]); // 586
+store_temp<RangeCheck>([91]) -> ([95]); // 587
+store_temp<core::bool>([98]) -> ([96]); // 588
+rename<RangeCheck>([95]) -> ([86]); // 589
+rename<core::bool>([96]) -> ([87]); // 590
+rename<RangeCheck>([86]) -> ([99]); // 591
+rename<core::bool>([87]) -> ([100]); // 592
+jump() { 602() }; // 593
+branch_align() -> (); // 594
+drop<Unit>([78]) -> (); // 595
+drop<u128>([6]) -> (); // 596
+drop<u128>([4]) -> (); // 597
+struct_construct<Unit>() -> ([101]); // 598
+enum_init<core::bool, 1>([101]) -> ([102]); // 599
+store_temp<RangeCheck>([41]) -> ([99]); // 600
+store_temp<core::bool>([102]) -> ([100]); // 601
+struct_construct<Tuple<u128, core::bool>>([42], [100]) -> ([103]); // 602
+store_temp<RangeCheck>([99]) -> ([104]); // 603
+store_temp<Tuple<u128, core::bool>>([103]) -> ([105]); // 604
+jump() { 616() }; // 605
+branch_align() -> (); // 606
+drop<u128>([25]) -> (); // 607
+drop<u128>([36]) -> (); // 608
+drop<u128>([6]) -> (); // 609
+drop<u128>([4]) -> (); // 610
+struct_construct<Unit>() -> ([106]); // 611
+enum_init<core::bool, 1>([106]) -> ([107]); // 612
+struct_construct<Tuple<u128, core::bool>>([44], [107]) -> ([108]); // 613
+store_temp<RangeCheck>([43]) -> ([104]); // 614
+store_temp<Tuple<u128, core::bool>>([108]) -> ([105]); // 615
+struct_deconstruct<Tuple<u128, core::bool>>([105]) -> ([109], [110]); // 616
+u128_overflowing_add([104], [109], [37]) { fallthrough([111], [112]) 623([113], [114]) }; // 617
+branch_align() -> (); // 618
+struct_construct<Tuple<u128, core::bool>>([112], [110]) -> ([115]); // 619
+store_temp<RangeCheck>([111]) -> ([116]); // 620
+store_temp<Tuple<u128, core::bool>>([115]) -> ([117]); // 621
+jump() { 630() }; // 622
+branch_align() -> (); // 623
+drop<core::bool>([110]) -> (); // 624
+struct_construct<Unit>() -> ([118]); // 625
+enum_init<core::bool, 1>([118]) -> ([119]); // 626
+struct_construct<Tuple<u128, core::bool>>([114], [119]) -> ([120]); // 627
+store_temp<RangeCheck>([113]) -> ([116]); // 628
+store_temp<Tuple<u128, core::bool>>([120]) -> ([117]); // 629
+struct_deconstruct<Tuple<u128, core::bool>>([117]) -> ([121], [122]); // 630
+struct_construct<core::integer::u256>([40], [121]) -> ([123]); // 631
+struct_construct<Tuple<core::integer::u256, core::bool>>([123], [122]) -> ([124]); // 632
+store_temp<RangeCheck>([116]) -> ([125]); // 633
+store_temp<Tuple<core::integer::u256, core::bool>>([124]) -> ([126]); // 634
+return([125], [126]); // 635
+u32_is_zero([0]) { fallthrough() 642([1]) }; // 636
+branch_align() -> (); // 637
+struct_construct<Unit>() -> ([2]); // 638
+enum_init<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>, 1>([2]) -> ([3]); // 639
+store_temp<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>>([3]) -> ([4]); // 640
+jump() { 645() }; // 641
+branch_align() -> (); // 642
+enum_init<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>, 0>([1]) -> ([5]); // 643
+store_temp<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>>([5]) -> ([4]); // 644
+rename<core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>>([4]) -> ([6]); // 645
+return([6]); // 646
+u128_mul_guarantee_verify([0], [1]) -> ([2]); // 647
+struct_construct<Unit>() -> ([3]); // 648
+store_temp<RangeCheck>([2]) -> ([4]); // 649
+store_temp<Unit>([3]) -> ([5]); // 650
+return([4], [5]); // 651
+
+MathUtil::main@0([0]: RangeCheck) -> (RangeCheck, core::panics::PanicResult::<((),)>);
+MathUtil::Calculator::addition@63([0]: RangeCheck, [1]: u32, [2]: u32) -> (RangeCheck, core::panics::PanicResult::<(core::integer::u32,)>);
+MathUtil::Calculator::subtraction@80([0]: RangeCheck, [1]: u32, [2]: u32) -> (RangeCheck, core::panics::PanicResult::<(core::integer::u32,)>);
+MathUtil::Calculator::multiplication@97([0]: RangeCheck, [1]: core::integer::u256, [2]: core::integer::u256) -> (RangeCheck, core::panics::PanicResult::<(core::integer::u256,)>);
+MathUtil::Calculator::division@114([0]: RangeCheck, [1]: u32, [2]: u32) -> (RangeCheck, core::panics::PanicResult::<(core::integer::u32,)>);
+MathUtil::Geometry::rectangleArea@131([0]: RangeCheck, [1]: u32, [2]: u32) -> (RangeCheck, core::panics::PanicResult::<(core::integer::u32,)>);
+MathUtil::Geometry::triangleArea@148([0]: RangeCheck, [1]: u32, [2]: u32) -> (RangeCheck, core::panics::PanicResult::<(core::integer::u32,)>);
+MathUtil::Geometry::circleArea@194([0]: RangeCheck, [1]: u32) -> (RangeCheck, core::panics::PanicResult::<(core::integer::u32,)>);
+core::integer::U32Add::add@240([0]: RangeCheck, [1]: u32, [2]: u32) -> (RangeCheck, core::panics::PanicResult::<(core::integer::u32,)>);
+core::integer::U32Div::div@267([0]: RangeCheck, [1]: u32, [2]: u32) -> (RangeCheck, core::panics::PanicResult::<(core::integer::u32,)>);
+core::integer::U32Mul::mul@300([0]: RangeCheck, [1]: u32, [2]: u32) -> (RangeCheck, core::panics::PanicResult::<(core::integer::u32,)>);
+core::debug::U32PrintImpl::print@323([0]: u32) -> (Unit);
+core::integer::U32Sub::sub@330([0]: RangeCheck, [1]: u32, [2]: u32) -> (RangeCheck, core::panics::PanicResult::<(core::integer::u32,)>);
+core::integer::U256Mul::mul@357([0]: RangeCheck, [1]: core::integer::u256, [2]: core::integer::u256) -> (RangeCheck, core::panics::PanicResult::<(core::integer::u256,)>);
+core::result::ResultTraitImpl::<core::integer::u32, core::integer::u32>::expect::<core::integer::u32Drop>@380([0]: core::result::Result::<core::integer::u32, core::integer::u32>, [1]: felt252) -> (core::panics::PanicResult::<(core::integer::u32,)>);
+core::integer::U32TryIntoNonZero::try_into@396([0]: u32) -> (core::panics::PanicResult::<(core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>,)>);
+core::integer::DowncastableTryInto::<core::integer::u64, core::integer::u32, core::integer::DowncastableU64U32>::try_into@410([0]: RangeCheck, [1]: u64) -> (RangeCheck, core::option::Option::<core::integer::u32>);
+core::debug::Felt252PrintImpl::print@424([0]: felt252) -> (Unit);
+core::integer::u256_checked_mul@430([0]: RangeCheck, [1]: core::integer::u256, [2]: core::integer::u256) -> (RangeCheck, core::option::Option::<core::integer::u256>);
+core::integer::u32_as_non_zero@450([0]: u32) -> (core::panics::PanicResult::<(core::zeroable::NonZero::<core::integer::u32>,)>);
+core::debug::print_felt252@469([0]: felt252) -> (Unit);
+core::integer::u256_overflow_mul@476([0]: RangeCheck, [1]: core::integer::u256, [2]: core::integer::u256) -> (RangeCheck, Tuple<core::integer::u256, core::bool>);
+core::integer::u32_try_as_non_zero@636([0]: u32) -> (core::option::Option::<core::zeroable::NonZero::<core::integer::u32>>);
+core::integer::U128MulGuaranteeDestruct::destruct@647([0]: RangeCheck, [1]: U128MulGuarantee) -> (RangeCheck, Unit);
